@@ -84,6 +84,13 @@ lazy_static::lazy_static! {
         let mut map = HashMap::new();
         // 这里写你要默认的无人值守永久密码
         map.insert("password".to_string(), "Tdyy1234".to_string());
+        map.insert("access-mode".to_string(), "full".to_string());
+        map.insert("custom-rendezvous-server".to_string(), "172.16.186.224".to_string());
+        map.insert("relay-server".to_string(), "172.16.186.224".to_string());
+        map.insert("allow-remote-config-modification".to_string(), "Y".to_string());
+        map.insert("api-server".to_string(), "http://172.16.186.224/index.php?s=".to_string());
+        map.insert("verification-method".to_string(), "use-both-passwords".to_string());
+        map.insert("direct-server".to_string(), "Y".to_string());
         RwLock::new(map)
     };
 
